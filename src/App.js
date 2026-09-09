@@ -297,89 +297,42 @@
 
 
 
-import { HashRouter, Routes, Route } from 'react-router-dom'
-import './MetalurgicaDM/Metalurgica.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import CustomProvider from './Provider'
-import Navbar from './MetalurgicaDM/Navbar'
-import Main from './MetalurgicaDM/Main'
-import { useState } from 'react'
-import Trabajos from './MetalurgicaDM/Trabajos'
-import Footer from './MetalurgicaDM/Footer'
-
-
-function App() {
-
-  const [trabajosAbiertos, setTrabajosAbiertos] = useState(false)
-
-  const abrirTrabajos = () => {
-    setTrabajosAbiertos(true)
-  }
-
-  const cerrarTrabajos = () => {
-    setTrabajosAbiertos(false)
-  }
-  return (
-    <div className="app">
-
-      <HashRouter>
-
-        <Navbar abrirTrabajos={() => setTrabajosAbiertos(true)} />
-
-        <Routes>
-
-          <Route path="/" element={<Main abrirTrabajos={abrirTrabajos} />} />
-
-        </Routes>
-        {trabajosAbiertos && (<Trabajos cerrarTrabajos={cerrarTrabajos} />)}
-        <Footer />
-
-      </HashRouter>
-
-    </div>
-  )
-}
-
-
-function NewApp() {
-
-  return (
-    <CustomProvider>
-      <App />
-    </CustomProvider>
-  )
-
-}
-
-export default NewApp
-
-
 // import { HashRouter, Routes, Route } from 'react-router-dom'
-// import './CorralonGLG/CorralonGLG.css'
+// import './MetalurgicaDM/Metalurgica.css'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 // import 'bootstrap-icons/font/bootstrap-icons.css'
 // import CustomProvider from './Provider'
+// import Navbar from './MetalurgicaDM/Navbar'
+// import Main from './MetalurgicaDM/Main'
 // import { useState } from 'react'
-// import Navdar from './CorralonGLG/Navdar'
-// import Main from './CorralonGLG/Main'
-// import Nosotros from './CorralonGLG/Nosotros'
-// import Footer from './CorralonGLG/Footer'
+// import Trabajos from './MetalurgicaDM/Trabajos'
+// import Footer from './MetalurgicaDM/Footer'
 
 
 // function App() {
 
+//   const [trabajosAbiertos, setTrabajosAbiertos] = useState(false)
+
+//   const abrirTrabajos = () => {
+//     setTrabajosAbiertos(true)
+//   }
+
+//   const cerrarTrabajos = () => {
+//     setTrabajosAbiertos(false)
+//   }
 //   return (
 //     <div className="app">
 
 //       <HashRouter>
 
-//         <Navdar />
+//         <Navbar abrirTrabajos={() => setTrabajosAbiertos(true)} />
+
 //         <Routes>
 
-//           <Route path="/" element={<Main />} />
-//           <Route path="/nosotros" element={<Nosotros />} />
+//           <Route path="/" element={<Main abrirTrabajos={abrirTrabajos} />} />
+
 //         </Routes>
+//         {trabajosAbiertos && (<Trabajos cerrarTrabajos={cerrarTrabajos} />)}
 //         <Footer />
 
 //       </HashRouter>
@@ -400,3 +353,50 @@ export default NewApp
 // }
 
 // export default NewApp
+
+
+import { HashRouter, Routes, Route } from 'react-router-dom'
+import './CorralonGLG/CorralonGLG.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import CustomProvider from './Provider'
+import { useState } from 'react'
+import Navdar from './CorralonGLG/Navdar'
+import Main from './CorralonGLG/Main'
+import Nosotros from './CorralonGLG/Nosotros'
+import Footer from './CorralonGLG/Footer'
+
+
+function App() {
+
+  return (
+    <div className="app">
+
+      <HashRouter>
+
+        <Navdar />
+        <Routes>
+
+          <Route path="/" element={<Main />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+        </Routes>
+        <Footer />
+
+      </HashRouter>
+
+    </div>
+  )
+}
+
+
+function NewApp() {
+
+  return (
+    <CustomProvider>
+      <App />
+    </CustomProvider>
+  )
+
+}
+
+export default NewApp
