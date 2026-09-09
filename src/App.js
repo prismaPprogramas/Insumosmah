@@ -99,73 +99,73 @@
 // }
 // export default NewApp
 
-import { HashRouter, Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
-import './Corralon.css'
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import CustomProvider from './Provider'
-import Navdar from './Corralon/Navdar'
-import Main from './Corralon/Main'
-import Footer from './Corralon/Footer'
-import Contacto from './Corralon/Contacto'
+// import { HashRouter, Routes, Route } from 'react-router-dom'
+// import { useState } from 'react'
+// import './Corralon.css'
+// import 'bootstrap-icons/font/bootstrap-icons.css'
+// import CustomProvider from './Provider'
+// import Navdar from './Corralon/Navdar'
+// import Main from './Corralon/Main'
+// import Footer from './Corralon/Footer'
+// import Contacto from './Corralon/Contacto'
 
-function App() {
+// function App() {
 
-  const [contactoAbierto, setContactoAbierto] = useState(false)
+//   const [contactoAbierto, setContactoAbierto] = useState(false)
 
-  const abrirContacto = () => {
-    setContactoAbierto(true)
-  }
+//   const abrirContacto = () => {
+//     setContactoAbierto(true)
+//   }
 
-  const cerrarContacto = () => {
-    setContactoAbierto(false)
-  }
+//   const cerrarContacto = () => {
+//     setContactoAbierto(false)
+//   }
 
-  return (
+//   return (
 
-    <div className="App">
+//     <div className="App">
 
-      <HashRouter>
+//       <HashRouter>
 
-        <Navdar abrirContacto={abrirContacto} />
+//         <Navdar abrirContacto={abrirContacto} />
 
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Main abrirContacto={abrirContacto} />
-            }
-          />
-        </Routes>
+//         <Routes>
+//           <Route
+//             path="/"
+//             element={
+//               <Main abrirContacto={abrirContacto} />
+//             }
+//           />
+//         </Routes>
 
-        <Footer abrirContacto={abrirContacto} />
+//         <Footer abrirContacto={abrirContacto} />
 
-        {
-          contactoAbierto &&
-          <Contacto cerrarContacto={cerrarContacto} />
-        }
+//         {
+//           contactoAbierto &&
+//           <Contacto cerrarContacto={cerrarContacto} />
+//         }
 
-      </HashRouter>
+//       </HashRouter>
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
 
-function NewApp() {
+// function NewApp() {
 
-  return (
+//   return (
 
-    <CustomProvider>
+//     <CustomProvider>
 
-      <App />
+//       <App />
 
-    </CustomProvider>
+//     </CustomProvider>
 
-  )
-}
+//   )
+// }
 
-export default NewApp
+// export default NewApp
 
 
 
@@ -291,6 +291,112 @@ export default NewApp
 //     </CustomProvider>
 
 //   )
+// }
+
+// export default NewApp
+
+
+
+import { HashRouter, Routes, Route } from 'react-router-dom'
+import './MetalurgicaDM/Metalurgica.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import CustomProvider from './Provider'
+import Navbar from './MetalurgicaDM/Navbar'
+import Main from './MetalurgicaDM/Main'
+import { useState } from 'react'
+import Trabajos from './MetalurgicaDM/Trabajos'
+import Footer from './MetalurgicaDM/Footer'
+
+
+function App() {
+
+  const [trabajosAbiertos, setTrabajosAbiertos] = useState(false)
+
+  const abrirTrabajos = () => {
+    setTrabajosAbiertos(true)
+  }
+
+  const cerrarTrabajos = () => {
+    setTrabajosAbiertos(false)
+  }
+  return (
+    <div className="app">
+
+      <HashRouter>
+
+        <Navbar abrirTrabajos={() => setTrabajosAbiertos(true)} />
+
+        <Routes>
+
+          <Route path="/" element={<Main abrirTrabajos={abrirTrabajos} />} />
+
+        </Routes>
+        {trabajosAbiertos && (<Trabajos cerrarTrabajos={cerrarTrabajos} />)}
+        <Footer />
+
+      </HashRouter>
+
+    </div>
+  )
+}
+
+
+function NewApp() {
+
+  return (
+    <CustomProvider>
+      <App />
+    </CustomProvider>
+  )
+
+}
+
+export default NewApp
+
+
+// import { HashRouter, Routes, Route } from 'react-router-dom'
+// import './CorralonGLG/CorralonGLG.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap-icons/font/bootstrap-icons.css'
+// import CustomProvider from './Provider'
+// import { useState } from 'react'
+// import Navdar from './CorralonGLG/Navdar'
+// import Main from './CorralonGLG/Main'
+// import Nosotros from './CorralonGLG/Nosotros'
+// import Footer from './CorralonGLG/Footer'
+
+
+// function App() {
+
+//   return (
+//     <div className="app">
+
+//       <HashRouter>
+
+//         <Navdar />
+//         <Routes>
+
+//           <Route path="/" element={<Main />} />
+//           <Route path="/nosotros" element={<Nosotros />} />
+//         </Routes>
+//         <Footer />
+
+//       </HashRouter>
+
+//     </div>
+//   )
+// }
+
+
+// function NewApp() {
+
+//   return (
+//     <CustomProvider>
+//       <App />
+//     </CustomProvider>
+//   )
+
 // }
 
 // export default NewApp
