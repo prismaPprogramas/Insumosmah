@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/prismaPprogramas/Insumosmah.git/static/css/main.f997bb43.css",
-    "main.js": "/prismaPprogramas/Insumosmah.git/static/js/main.8f697e8d.js",
-    "static/js/453.09ed972e.chunk.js": "/prismaPprogramas/Insumosmah.git/static/js/453.09ed972e.chunk.js",
-    "static/media/bootstrap-icons.woff?": "/prismaPprogramas/Insumosmah.git/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
-    "static/media/bootstrap-icons.woff2?": "/prismaPprogramas/Insumosmah.git/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
-    "index.html": "/prismaPprogramas/Insumosmah.git/index.html",
-    "main.f997bb43.css.map": "/prismaPprogramas/Insumosmah.git/static/css/main.f997bb43.css.map",
-    "main.8f697e8d.js.map": "/prismaPprogramas/Insumosmah.git/static/js/main.8f697e8d.js.map",
-    "453.09ed972e.chunk.js.map": "/prismaPprogramas/Insumosmah.git/static/js/453.09ed972e.chunk.js.map"
+    "main.css": "/Insumosmah/static/css/main.6ed5d83e.css",
+    "main.js": "/Insumosmah/static/js/main.d3e57cce.js",
+    "static/js/453.09ed972e.chunk.js": "/Insumosmah/static/js/453.09ed972e.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/Insumosmah/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "/Insumosmah/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "index.html": "/Insumosmah/index.html",
+    "main.6ed5d83e.css.map": "/Insumosmah/static/css/main.6ed5d83e.css.map",
+    "main.d3e57cce.js.map": "/Insumosmah/static/js/main.d3e57cce.js.map",
+    "453.09ed972e.chunk.js.map": "/Insumosmah/static/js/453.09ed972e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f997bb43.css",
-    "static/js/main.8f697e8d.js"
+    "static/css/main.6ed5d83e.css",
+    "static/js/main.d3e57cce.js"
   ]
 }
