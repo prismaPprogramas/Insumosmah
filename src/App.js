@@ -355,16 +355,62 @@
 // export default NewApp
 
 
+// import { HashRouter, Routes, Route } from 'react-router-dom'
+// import './CorralonGLG/CorralonGLG.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap-icons/font/bootstrap-icons.css'
+// import CustomProvider from './Provider'
+// import { useState } from 'react'
+// import Navdar from './CorralonGLG/Navdar'
+// import Main from './CorralonGLG/Main'
+// import Nosotros from './CorralonGLG/Nosotros'
+// import Footer from './CorralonGLG/Footer'
+
+
+// function App() {
+
+//   return (
+//     <div className="app">
+
+//       <HashRouter>
+
+//         <Navdar />
+//         <Routes>
+
+//           <Route path="/" element={<Main />} />
+//           <Route path="/nosotros" element={<Nosotros />} />
+//         </Routes>
+//         <Footer />
+
+//       </HashRouter>
+
+//     </div>
+//   )
+// }
+
+
+// function NewApp() {
+
+//   return (
+//     <CustomProvider>
+//       <App />
+//     </CustomProvider>
+//   )
+
+// }
+
+// export default NewApp
+
+
 import { HashRouter, Routes, Route } from 'react-router-dom'
-import './CorralonGLG/CorralonGLG.css'
+import './Insumosmah/Insumosmah.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import CustomProvider from './Provider'
-import { useState } from 'react'
-import Navdar from './CorralonGLG/Navdar'
-import Main from './CorralonGLG/Main'
-import Nosotros from './CorralonGLG/Nosotros'
-import Footer from './CorralonGLG/Footer'
+import Main from './Insumosmah/Main'
+import Footer from './Insumosmah/Footer'
+import { CarritoProvider } from './CarritoContext'
+import Checkout from './Insumosmah/Checkout'
+
 
 
 function App() {
@@ -374,14 +420,12 @@ function App() {
 
       <HashRouter>
 
-        <Navdar />
         <Routes>
 
           <Route path="/" element={<Main />} />
-          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
-
       </HashRouter>
 
     </div>
@@ -392,9 +436,9 @@ function App() {
 function NewApp() {
 
   return (
-    <CustomProvider>
+    <CarritoProvider>
       <App />
-    </CustomProvider>
+    </CarritoProvider>
   )
 
 }

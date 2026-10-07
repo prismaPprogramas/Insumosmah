@@ -1,0 +1,5666 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.mahHero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(255, 89, 162, 0.15),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #fff 0%, #fff5f9 55%, #ffe3ee 100%);
+  color: #171717;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.mahNavbar {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+/* LOGO */
+
+.mahLogoBox {
+  display: flex;
+  align-items: center;
+}
+
+.mahLogo {
+  width: 145px;
+  height: auto;
+  display: block;
+}
+
+/* LINKS */
+
+.mahNavLinks {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.mahNavLinks a {
+  color: #222;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease;
+}
+
+.mahNavLinks a:hover {
+  opacity: 0.55;
+}
+
+/* ACCIONES */
+
+.mahNavActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mahIconBtn,
+.mahCartBtn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.mahIconBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #222;
+  font-size: 23px;
+}
+
+.mahCartBtn {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 17px;
+  background: #171717;
+  color: white;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mahCartBtn span {
+  width: 21px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  background: #ff5d9d;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.mahHeroContent {
+  min-height: calc(100vh - 140px);
+  max-width: 1450px;
+  margin: auto;
+  padding: 60px 6% 90px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+}
+
+/* ========================================
+   TEXTO
+======================================== */
+
+.mahHeroText {
+  position: relative;
+  z-index: 3;
+}
+
+.mahEyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #d62970;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.mahHeroText h1 {
+  margin: 0;
+  max-width: 750px;
+  font-size: clamp(55px, 6vw, 100px);
+  line-height: 0.93;
+  letter-spacing: -5px;
+  font-weight: 800;
+}
+
+.mahHeroText h1 span {
+  color: #e93980;
+}
+
+.mahHeroText p {
+  max-width: 520px;
+  margin: 30px 0;
+  color: #606060;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   BOTONES
+======================================== */
+
+.mahHeroButtons {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.mahPrimaryButton,
+.mahSecondaryButton {
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 25px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 100px;
+}
+
+.mahPrimaryButton {
+  gap: 25px;
+  background: #171717;
+  color: white;
+}
+
+.mahPrimaryButton span {
+  font-size: 20px;
+}
+
+.mahSecondaryButton {
+  color: #171717;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+/* ========================================
+   VISUAL
+======================================== */
+
+.mahHeroVisual {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CÍRCULOS */
+
+.mahCircle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mahCircleOne {
+  width: 480px;
+  height: 480px;
+  background: #ff6fa9;
+  right: 0;
+  top: 30px;
+}
+
+.mahCircleTwo {
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  left: 20px;
+  bottom: 30px;
+}
+
+/* CARD */
+
+.mahHeroCard {
+  width: 340px;
+  height: 430px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(15px);
+  border-radius: 4px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transform: rotate(-4deg);
+}
+
+.mahCardMini {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: #e93980;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.mahHeroCard h2 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+.mahHeroCard p {
+  margin: 18px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.mahCardArrow {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  background: #171717;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* ========================================
+   BARRA INFERIOR
+======================================== */
+
+.mahHeroBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #171717;
+  color: white;
+  overflow: hidden;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+  .mahNavbar {
+    height: 75px;
+    padding: 0 20px;
+  }
+  .mahLogo {
+    width: 110px;
+  }
+  .mahNavLinks {
+    display: none;
+  }
+  .mahIconBtn {
+    display: none;
+  }
+  .mahCartBtn {
+    height: 38px;
+    padding: 0 13px;
+  }
+  /* HERO */
+  .mahHeroContent {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 65px 22px 100px;
+    gap: 45px;
+  }
+  .mahHeroText {
+    width: 100%;
+  }
+  .mahEyebrow {
+    margin-bottom: 16px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .mahHeroText h1 {
+    font-size: 53px;
+    line-height: 0.96;
+    letter-spacing: -3px;
+  }
+  .mahHeroText p {
+    margin: 22px 0;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  /* BOTONES */
+  .mahHeroButtons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .mahPrimaryButton,
+  .mahSecondaryButton {
+    width: 100%;
+  }
+  /* VISUAL */
+  .mahHeroVisual {
+    width: 100%;
+    min-height: 400px;
+  }
+  .mahCircleOne {
+    width: 330px;
+    height: 330px;
+    top: 20px;
+    right: -70px;
+  }
+  .mahCircleTwo {
+    width: 130px;
+    height: 130px;
+    left: -20px;
+  }
+  .mahHeroCard {
+    width: 260px;
+    height: 330px;
+    padding: 25px;
+  }
+  .mahHeroCard h2 {
+    font-size: 38px;
+  }
+  /* BARRA */
+  .mahHeroBottom {
+    justify-content: flex-start;
+    gap: 35px;
+    padding: 0 20px;
+    white-space: nowrap;
+  }
+}
+
+/* -------------------------DESTACADOSCOMPONENT-------------------------------------- */
+
+/* ========================================
+   DESTACADOS
+======================================== */
+
+.destacados {
+  width: 100%;
+  padding: 70px 0 80px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.destacadosHeader {
+  max-width: 1450px;
+  margin: 0 auto 30px;
+  padding: 0 6%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.destacadosMini {
+  display: block;
+  margin-bottom: 8px;
+  color: #e93980;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.destacadosHeader h2 {
+  margin: 0;
+  color: #171717;
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+/* ========================================
+   HEADER DERECHA
+======================================== */
+
+.destacadosHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.verTodos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #171717;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.verTodos span {
+  font-size: 18px;
+}
+
+/* ========================================
+   BOTONES SLIDER
+======================================== */
+
+.sliderButtons {
+  display: flex;
+  gap: 7px;
+}
+
+.sliderButtons button {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #171717;
+  cursor: pointer;
+  font-size: 17px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border 0.2s ease;
+}
+
+.sliderButtons button:hover {
+  background: #171717;
+  color: #ffffff;
+  border-color: #171717;
+}
+
+/* ========================================
+   SLIDER
+======================================== */
+
+.productosSlider {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 0 max(6%, calc((100vw - 1450px) / 2)) 15px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+}
+
+.productosSlider::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   PRODUCTO
+======================================== */
+
+.productoCard {
+  flex: 0 0 clamp(180px, 16vw, 235px);
+  scroll-snap-align: start;
+  cursor: pointer;
+  border: 1px solid rgba(233, 57, 128, 0.28);
+  border-radius: 8px;
+  padding: 7px;
+  background: #ffffff;
+  box-shadow:
+    0 4px 14px rgba(233, 57, 128, 0.08);
+    transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.productoCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(233, 57, 128, 0.55);
+  box-shadow:
+    0 8px 22px rgba(233, 57, 128, 0.13);
+}
+
+/* ========================================
+   IMAGEN
+======================================== */
+
+.productoImagen {
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff6f9;
+  border-radius: 5px;
+}
+
+.productoImagen img {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.productoCard:hover .productoImagen img {
+  transform: scale(1.04);
+}
+
+/* ========================================
+   TAG DESTACADO
+======================================== */
+
+.productoTag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  padding: 6px 8px;
+  background: #171717;
+  color: #ffffff;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   FAVORITO
+======================================== */
+
+.productoFavorito {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 17px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.productoFavorito:hover {
+  transform: scale(1.08);
+  background: #fff0f6;
+}
+
+/* ========================================
+   INFO PRODUCTO
+======================================== */
+
+.productoInfo {
+  padding: 12px 2px 0;
+}
+
+.productoCategoria {
+  color: #999999;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.productoInfo h3 {
+  min-height: 34px;
+  margin: 5px 0 9px;
+  color: #242424;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* ========================================
+   PRECIO + COMPRA
+======================================== */
+
+.productoCompra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 9px;
+  border-top: 1px solid #eeeeee;
+}
+
+.productoCompra strong {
+  color: #171717;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* ========================================
+   BOTÓN AGREGAR
+======================================== */
+
+.productoAgregar {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #ff5d9d;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 300;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.productoAgregar:hover {
+  transform: scale(1.08);
+  background: #e93980;
+}
+
+/* ========================================
+   INDICADOR DESLIZAR
+======================================== */
+
+.deslizaIndicador {
+  display: none;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+  .productoCard {
+    flex-basis: 205px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+  .destacados {
+    padding: 50px 0 60px;
+  }
+  /* ======================================
+     HEADER
+  ====================================== */
+  .destacadosHeader {
+    margin-bottom: 22px;
+    padding: 0 16px;
+    align-items: flex-end;
+  }
+  .destacadosMini {
+    margin-bottom: 6px;
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+  .destacadosHeader h2 {
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -1.5px;
+  }
+  /* ======================================
+     HEADER DERECHO
+  ====================================== */
+  .destacadosHeaderRight {
+    gap: 0;
+  }
+  .verTodos {
+    display: none;
+  }
+  .sliderButtons {
+    display: none;
+  }
+  /* ======================================
+     SLIDER MOBILE
+  ====================================== */
+  .productosSlider {
+    gap: 10px;
+    padding: 0 16px 10px;
+    scroll-padding-left: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* ======================================
+     CARD MOBILE
+  ====================================== */
+  .productoCard {
+    /*
+      Aproximadamente dos cards visibles.
+      Además queda espacio suficiente
+      para notar que existen más productos.
+    */
+    flex: 0 0 43vw;
+    max-width: 185px;
+  }
+  /* ======================================
+     IMAGEN
+  ====================================== */
+  .productoImagen {
+    aspect-ratio: 1 / 1.08;
+  }
+  .productoImagen img {
+    width: 72%;
+    height: 72%;
+  }
+  /* ======================================
+     TAG
+  ====================================== */
+  .productoTag {
+    top: 8px;
+    left: 8px;
+    padding: 5px 7px;
+    font-size: 6px;
+  }
+  /* ======================================
+     FAVORITO
+  ====================================== */
+  .productoFavorito {
+    top: 7px;
+    right: 7px;
+    width: 29px;
+    height: 29px;
+    font-size: 15px;
+  }
+  /* ======================================
+     INFO
+  ====================================== */
+  .productoInfo {
+    padding-top: 10px;
+  }
+  .productoCategoria {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .productoInfo h3 {
+    min-height: 31px;
+    margin: 5px 0 8px;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  /* ======================================
+     COMPRA
+  ====================================== */
+  .productoCompra {
+    padding-top: 8px;
+  }
+  .productoCompra strong {
+    font-size: 14px;
+  }
+  .productoAgregar {
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+  }
+  /* ======================================
+     INDICADOR
+  ====================================== */
+  .deslizaIndicador {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 15px 16px 0;
+    color: #aaaaaa;
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+  }
+  .deslizaIndicador span {
+    color: #e93980;
+    font-size: 16px;
+  }
+}
+
+/* ========================================
+   MOBILE MUY CHICO
+======================================== */
+
+@media (max-width: 380px) {
+  .productoCard {
+    flex-basis: 44vw;
+  }
+  .destacadosHeader h2 {
+    font-size: 29px;
+  }
+  .productoCompra strong {
+    font-size: 13px;
+  }
+  .productoAgregar {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+}
+
+
+/* -----------------------------PRODUCTOSCOMPONENT---------------------------------------- */
+
+/* =========================================
+   PRODUCTOS
+========================================= */
+
+.productosSeccion {
+  width: 100%;
+  position: relative;
+  padding: 90px 6% 110px;
+  background: #ffffff;
+  color: #171717;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.productosTitulo {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto 35px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.productosMiniTitulo {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #e93980;
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.productosTitulo h2 {
+  margin: 0;
+
+  font-size: clamp(36px, 4vw, 62px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -3px;
+}
+
+.productosCantidad {
+  color: #888;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+.productosBuscador {
+  width: 100%;
+  max-width: 1450px;
+  height: 60px;
+
+  position: relative;
+
+  margin: 0 auto 12px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #e8e8e8;
+  background: #fafafa;
+}
+
+.buscadorIcono {
+  width: 55px;
+
+  display: grid;
+  place-items: center;
+
+  color: #888;
+  font-size: 22px;
+}
+
+.productosBuscador input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 55px 0 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #171717;
+
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.productosBuscador input::placeholder {
+  color: #aaa;
+}
+
+.limpiarBusqueda {
+  width: 50px;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #777;
+
+  cursor: pointer;
+  font-size: 22px;
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.productosToolbar {
+  width: 100%;
+  max-width: 1450px;
+  min-height: 58px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+
+  background: #fff;
+}
+
+.toolbarIzquierda,
+.toolbarDerecha {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.botonFiltros {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 15px;
+
+  border: 1px solid #dedede;
+  border-radius: 100px;
+
+  background: #fff;
+
+  color: #171717;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.filtroIcono {
+  font-size: 12px;
+}
+
+.contadorFiltros {
+  min-width: 19px;
+  height: 19px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #e93980;
+  color: #fff;
+
+  font-size: 7px;
+}
+
+
+/* =========================================
+   SELECTS
+========================================= */
+
+.selectContenedor,
+.ordenContenedor {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #dedede;
+  border-radius: 100px;
+
+  background: #fff;
+}
+
+.selectContenedor select,
+.ordenContenedor select {
+  height: 100%;
+
+  padding: 0 30px 0 14px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #333;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.ordenContenedor {
+  padding-left: 14px;
+}
+
+.ordenLabel {
+  color: #aaa;
+
+  font-size: 6px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CARRITO EN TOOLBAR
+========================================= */
+
+.toolbarCarrito {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 7px 0 14px;
+
+  border: none;
+  border-radius: 100px;
+
+  background: #171717;
+  color: #fff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.toolbarCarrito:hover {
+  transform: translateY(-1px);
+  background: #e93980;
+}
+
+.toolbarCarritoIcono {
+  font-size: 12px;
+}
+
+.toolbarCarritoTexto {
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.toolbarCarritoCantidad {
+  min-width: 26px;
+  height: 26px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0 5px;
+
+  border-radius: 100px;
+
+  background: #ff5d9d;
+  color: #fff;
+
+  font-size: 8px;
+  font-weight: 900;
+}
+
+
+/* =========================================
+   TOOLBAR FLOTANTE
+========================================= */
+
+.toolbarFlotante {
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 900;
+
+  padding: 7px 6%;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-bottom: 1px solid #eee;
+
+  box-shadow:
+    0 6px 25px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  transform: translateY(-120%);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease,
+    visibility 0.28s ease;
+}
+
+.toolbarFlotanteVisible {
+  transform: translateY(0);
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.toolbarFlotanteContenido {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: auto;
+}
+
+.productosToolbarInternaFlotante {
+  min-height: 48px;
+
+  border: none;
+  background: transparent;
+}
+
+
+/* =========================================
+   FILTROS ACTIVOS
+========================================= */
+
+.filtrosActivos {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 15px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.chipsFiltros {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.chipsFiltros button {
+  min-height: 31px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 11px;
+
+  border: none;
+  border-radius: 100px;
+
+  background: #f5f5f5;
+  color: #555;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.chipsFiltros button span {
+  color: #e93980;
+  font-size: 13px;
+}
+
+.limpiarTodo {
+  flex-shrink: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #999;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.productosGrid {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 35px auto 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 38px 18px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.catalogoCard {
+  min-width: 0;
+}
+
+.catalogoImagen {
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #f6f6f6;
+}
+
+.catalogoImagen img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.catalogoCard:hover
+.catalogoImagen img {
+  transform: scale(1.025);
+}
+
+.catalogoTag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  z-index: 2;
+
+  padding: 6px 9px;
+
+  border-radius: 100px;
+
+  background: #171717;
+  color: #fff;
+
+  font-size: 6px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.catalogoFavorito {
+  width: 34px;
+  height: 34px;
+
+  position: absolute;
+  top: 9px;
+  right: 9px;
+
+  z-index: 3;
+
+  display: grid;
+  place-items: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: #171717;
+
+  cursor: pointer;
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   SIN IMAGEN
+========================================= */
+
+.sinImagen {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fafafa,
+      #f1f1f1
+    );
+}
+
+.sinImagen span {
+  color: #e93980;
+
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.sinImagen small {
+  margin-top: 3px;
+
+  color: #aaa;
+
+  font-size: 5px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   INFO PRODUCTO
+========================================= */
+
+.catalogoInfo {
+  padding-top: 13px;
+}
+
+.catalogoCategoria {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #aaa;
+
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.catalogoInfo h3 {
+  min-height: 36px;
+
+  margin: 0 0 13px;
+
+  color: #222;
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.catalogoCompra {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.catalogoPrecio {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.catalogoPrecio strong {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.catalogoPrecio small {
+  font-size: 6px;
+  font-weight: 700;
+}
+
+.productoDisponible {
+  color: #55a36c;
+}
+
+.productoSinStock {
+  color: #c8c8c8;
+}
+
+
+/* =========================================
+   AGREGAR
+========================================= */
+
+.catalogoAgregar {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #171717;
+  color: #fff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 20px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.catalogoAgregar:hover {
+  background: #e93980;
+  transform: scale(1.05);
+}
+
+.catalogoAgregarCheck {
+  background: #e93980;
+
+  font-size: 15px;
+}
+
+.catalogoAgregar:disabled {
+  background: #ddd;
+  color: #aaa;
+
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =========================================
+   SIN RESULTADOS
+========================================= */
+
+.sinResultados {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 60px auto;
+
+  padding: 90px 20px;
+
+  text-align: center;
+
+  background: #fafafa;
+}
+
+.sinResultados > span {
+  color: #e93980;
+
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.sinResultados h3 {
+  margin: 15px 0 7px;
+
+  font-size: 28px;
+}
+
+.sinResultados p {
+  margin: 0;
+
+  color: #888;
+
+  font-size: 11px;
+}
+
+.sinResultados button {
+  min-height: 43px;
+
+  margin-top: 25px;
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 100px;
+
+  background: #171717;
+  color: #fff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MOSTRAR MÁS
+========================================= */
+
+.mostrarMasContenedor {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 65px auto 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 22px;
+}
+
+.progresoProductos {
+  width: 250px;
+
+  text-align: center;
+}
+
+.progresoProductos > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #999;
+
+  font-size: 7px;
+}
+
+.progresoProductos strong {
+  color: #333;
+}
+
+.barraProgreso {
+  width: 100%;
+  height: 2px;
+
+  overflow: hidden;
+
+  background: #e8e8e8;
+}
+
+.barraProgreso span {
+  height: 100%;
+
+  display: block;
+
+  background: #e93980;
+
+  transition: width 0.3s ease;
+}
+
+.mostrarMas {
+  min-width: 180px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  border: 1px solid #171717;
+  border-radius: 100px;
+
+  background: #fff;
+  color: #171717;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   OVERLAY GENERAL
+========================================= */
+
+.productosOverlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1100;
+
+  background: rgba(0, 0, 0, 0.48);
+
+  backdrop-filter: blur(2px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.productosOverlayActivo {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+/* =========================================
+   OFFCANVAS FILTROS
+========================================= */
+
+.filtrosOffcanvas {
+  width: min(420px, 92vw);
+  height: 100dvh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1200;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #fff;
+
+  transform: translateX(-105%);
+
+  transition: transform 0.32s ease;
+
+  box-shadow:
+    15px 0 50px rgba(0, 0, 0, 0.12);
+}
+
+.filtrosOffcanvasAbierto {
+  transform: translateX(0);
+}
+
+
+/* =========================================
+   HEADER OFFCANVAS
+========================================= */
+
+.offcanvasHeader,
+.carritoHeader {
+  min-height: 95px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 25px;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.offcanvasHeader > div > span,
+.carritoHeader > div > span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #e93980;
+
+  font-size: 6px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.offcanvasHeader h3,
+.carritoHeader h3 {
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.offcanvasHeader > button,
+.carritoCerrar {
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #ddd;
+  border-radius: 50%;
+
+  background: transparent;
+  color: #333;
+
+  cursor: pointer;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   CONTENIDO FILTROS
+========================================= */
+
+.offcanvasContenido {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 0 25px;
+}
+
+.grupoFiltro {
+  padding: 28px 0;
+
+  border-bottom: 1px solid #eee;
+}
+
+.grupoFiltro h4 {
+  margin: 0 0 18px;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   CATEGORÍAS FILTRO
+========================================= */
+
+.categoriasFiltro {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.categoriasFiltro button {
+  width: 100%;
+  min-height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 11px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #777;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  text-align: left;
+}
+
+.categoriasFiltro button span {
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.categoriasFiltro button small {
+  font-size: 7px;
+}
+
+.categoriasFiltro
+.categoriaFiltroActiva {
+  background: #fff0f6;
+  color: #e93980;
+}
+
+
+/* =========================================
+   PRECIO
+========================================= */
+
+.precioInputs {
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items: end;
+
+  gap: 10px;
+}
+
+.precioInputs label > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #aaa;
+
+  font-size: 6px;
+  font-weight: 900;
+}
+
+.precioInputs label > div {
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
+
+  border: 1px solid #ddd;
+}
+
+.precioInputs small {
+  color: #aaa;
+}
+
+.precioInputs input {
+  width: 100%;
+  min-width: 0;
+
+  padding-left: 5px;
+
+  border: none;
+  outline: none;
+
+  font-family: inherit;
+}
+
+.precioSeparador {
+  margin-bottom: 13px;
+
+  color: #bbb;
+}
+
+
+/* =========================================
+   CHECKS
+========================================= */
+
+.checkFiltro {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 15px;
+
+  cursor: pointer;
+}
+
+.checkFiltro input {
+  display: none;
+}
+
+.checkVisual {
+  width: 19px;
+  height: 19px;
+
+  flex-shrink: 0;
+
+  position: relative;
+
+  border: 1px solid #ccc;
+}
+
+.checkFiltro
+input:checked
++
+.checkVisual {
+  border-color: #e93980;
+  background: #e93980;
+}
+
+.checkFiltro
+input:checked
++
+.checkVisual::after {
+  content: "✓";
+
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #fff;
+
+  font-size: 10px;
+}
+
+.checkFiltro strong,
+.checkFiltro small {
+  display: block;
+}
+
+.checkFiltro strong {
+  margin-bottom: 2px;
+
+  font-size: 9px;
+}
+
+.checkFiltro small {
+  color: #999;
+
+  font-size: 7px;
+}
+
+
+/* =========================================
+   FOOTER FILTROS
+========================================= */
+
+.offcanvasFooter {
+  flex-shrink: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    0.7fr 1.3fr;
+
+  gap: 8px;
+
+  padding: 15px 20px;
+
+  border-top: 1px solid #eee;
+
+  background: #fff;
+}
+
+.offcanvasFooter button {
+  height: 47px;
+
+  border-radius: 100px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.offcanvasLimpiar {
+  border: 1px solid #ddd;
+
+  background: #fff;
+  color: #555;
+}
+
+.offcanvasAplicar {
+  border: none;
+
+  background: #171717;
+  color: #fff;
+}
+
+
+/* =========================================
+   CARRITO OFFCANVAS
+========================================= */
+
+.carritoOffcanvas {
+  width: min(480px, 94vw);
+  height: 100dvh;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  z-index: 1200;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #fff;
+
+  transform: translateX(105%);
+
+  transition: transform 0.32s ease;
+
+  box-shadow:
+    -15px 0 50px rgba(0, 0, 0, 0.13);
+}
+
+.carritoOffcanvasAbierto {
+  transform: translateX(0);
+}
+
+
+/* =========================================
+   HEADER CARRITO
+========================================= */
+
+.carritoHeader {
+  min-height: 105px;
+}
+
+.carritoHeader p {
+  margin: 4px 0 0;
+
+  color: #999;
+
+  font-size: 7px;
+}
+
+
+/* =========================================
+   CONTENIDO CARRITO
+========================================= */
+
+.carritoContenido {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 0 24px;
+}
+
+.carritoProductos {
+  width: 100%;
+}
+
+
+/* =========================================
+   PRODUCTO CARRITO
+========================================= */
+
+.carritoProducto {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    95px 1fr;
+
+  gap: 15px;
+
+  padding: 22px 28px 22px 0;
+
+  border-bottom: 1px solid #eee;
+}
+
+.carritoProductoImagen {
+  width: 95px;
+  height: 110px;
+
+  overflow: hidden;
+
+  background: #f5f5f5;
+}
+
+.carritoProductoImagen img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.carritoSinImagen {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  color: #e93980;
+
+  font-size: 17px;
+  font-weight: 900;
+}
+
+
+/* =========================================
+   INFO CARRITO
+========================================= */
+
+.carritoProductoInfo {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.carritoProductoCategoria {
+  margin-bottom: 5px;
+
+  color: #aaa;
+
+  font-size: 5px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.carritoProductoInfo h4 {
+  margin: 0 0 7px;
+
+  color: #222;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.carritoProductoPrecio {
+  color: #171717;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   ABAJO PRODUCTO CARRITO
+========================================= */
+
+.carritoProductoAbajo {
+  margin-top: auto;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+
+/* =========================================
+   CANTIDAD
+========================================= */
+
+.carritoCantidad {
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #ddd;
+  border-radius: 100px;
+}
+
+.carritoCantidad button {
+  width: 31px;
+  height: 30px;
+
+  border: none;
+  background: transparent;
+
+  color: #222;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.carritoCantidad span {
+  min-width: 22px;
+
+  text-align: center;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   SUBTOTAL PRODUCTO
+========================================= */
+
+.carritoProductoSubtotal {
+  text-align: right;
+}
+
+.carritoProductoSubtotal small {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #aaa;
+
+  font-size: 5px;
+  font-weight: 800;
+}
+
+.carritoProductoSubtotal strong {
+  font-size: 10px;
+}
+
+
+/* =========================================
+   ELIMINAR
+========================================= */
+
+.carritoEliminar {
+  width: 25px;
+  height: 25px;
+
+  position: absolute;
+  top: 19px;
+  right: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: none;
+  background: transparent;
+
+  color: #bbb;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: color 0.2s ease;
+}
+
+.carritoEliminar:hover {
+  color: #e93980;
+}
+
+
+/* =========================================
+   VACIAR CARRITO
+========================================= */
+
+.vaciarCarrito {
+  display: block;
+
+  margin: 20px 0 30px auto;
+
+  border: none;
+  background: transparent;
+
+  color: #aaa;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.vaciarCarrito:hover {
+  color: #e93980;
+}
+
+
+/* =========================================
+   CARRITO VACÍO
+========================================= */
+
+.carritoVacio {
+  min-height: 430px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  text-align: center;
+}
+
+.carritoVacioIcono {
+  width: 85px;
+  height: 85px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+
+  background: #fff0f6;
+}
+
+.carritoVacioIcono span {
+  color: #e93980;
+
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.carritoVacio h4 {
+  margin: 0 0 7px;
+
+  font-size: 20px;
+}
+
+.carritoVacio p {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 9px;
+}
+
+.carritoVacio button {
+  height: 42px;
+
+  margin-top: 22px;
+  padding: 0 20px;
+
+  border: 1px solid #171717;
+  border-radius: 100px;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 7px;
+  font-weight: 900;
+}
+
+
+/* =========================================
+   FOOTER CARRITO
+========================================= */
+
+.carritoFooter {
+  flex-shrink: 0;
+
+  padding: 18px 24px 20px;
+
+  border-top: 1px solid #e8e8e8;
+
+  background: #fff;
+
+  box-shadow:
+    0 -10px 35px rgba(0, 0, 0, 0.04);
+}
+
+.carritoResumenLinea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 13px;
+
+  color: #888;
+
+  font-size: 8px;
+}
+
+.carritoResumenLinea strong {
+  color: #333;
+}
+
+
+/* =========================================
+   TOTAL
+========================================= */
+
+.carritoTotal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #eee;
+}
+
+.carritoTotal > div span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #171717;
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.carritoTotal > div small {
+  color: #aaa;
+
+  font-size: 6px;
+}
+
+.carritoTotal > strong {
+  color: #171717;
+
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+
+/* =========================================
+   INICIAR COMPRA
+========================================= */
+
+.iniciarCompra {
+  width: 100%;
+  height: 54px;
+
+  margin-top: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  border: none;
+  border-radius: 100px;
+
+  background: #e93980;
+  color: #fff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.iniciarCompra:hover {
+  background: #d72c70;
+
+  transform: translateY(-1px);
+}
+
+.iniciarCompra span:first-child {
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.iniciarCompra span:last-child {
+  font-size: 18px;
+}
+
+
+/* =========================================
+   SEGUIR COMPRANDO
+========================================= */
+
+.seguirComprando {
+  width: 100%;
+
+  margin-top: 12px;
+
+  border: none;
+  background: transparent;
+
+  color: #888;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .productosGrid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+  .productosToolbar {
+    gap: 8px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .productosSeccion {
+    padding:
+      65px
+      10px
+      80px;
+  }
+
+  /* TÍTULO */
+
+  .productosTitulo {
+    margin-bottom: 25px;
+
+    padding: 0 5px;
+  }
+
+  .productosTitulo h2 {
+    font-size: 38px;
+
+    letter-spacing: -2px;
+  }
+
+  .productosCantidad {
+    display: none;
+  }
+
+  /* BUSCADOR */
+
+  .productosBuscador {
+    height: 52px;
+
+    margin-bottom: 8px;
+  }
+
+  .buscadorIcono {
+    width: 45px;
+  }
+
+  .productosBuscador input {
+    font-size: 11px;
+  }
+
+  /* TOOLBAR */
+
+  .productosToolbar {
+    min-height: 50px;
+
+    gap: 5px;
+
+    border-top: none;
+  }
+
+  .toolbarIzquierda,
+  .toolbarDerecha {
+    gap: 4px;
+  }
+
+  .botonFiltros {
+    height: 37px;
+
+    padding: 0 10px;
+  }
+
+  .botonFiltros > span:nth-child(2) {
+    display: none;
+  }
+
+  .filtroIcono {
+    font-size: 13px;
+  }
+
+  .selectContenedor,
+  .ordenContenedor {
+    height: 37px;
+  }
+
+  .selectContenedor select {
+    max-width: 135px;
+
+    padding:
+      0
+      20px
+      0
+      8px;
+
+    font-size: 7px;
+  }
+
+  .ordenContenedor {
+    padding-left: 0;
+  }
+
+  .ordenLabel {
+    display: none;
+  }
+
+  .ordenContenedor select {
+    max-width: 105px;
+
+    padding:
+      0
+      18px
+      0
+      8px;
+
+    font-size: 7px;
+  }
+
+  /* CARRITO TOOLBAR */
+
+  .toolbarCarrito {
+    width: 38px;
+    height: 38px;
+
+    position: relative;
+
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .toolbarCarritoTexto {
+    display: none;
+  }
+
+  .toolbarCarritoIcono {
+    font-size: 13px;
+  }
+
+  .toolbarCarritoCantidad {
+    min-width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: -5px;
+    right: -4px;
+
+    padding: 0 3px;
+
+    border: 2px solid #fff;
+
+    font-size: 6px;
+  }
+
+  /* TOOLBAR FLOTANTE */
+
+  .toolbarFlotante {
+    padding:
+      6px
+      10px;
+  }
+
+  .productosToolbarInternaFlotante {
+    min-height: 42px;
+  }
+
+  /* FILTROS ACTIVOS */
+
+  .filtrosActivos {
+    margin-top: 10px;
+  }
+
+  .limpiarTodo {
+    display: none;
+  }
+
+  .chipsFiltros {
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .chipsFiltros::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chipsFiltros button {
+    flex-shrink: 0;
+  }
+
+  /* GRID */
+
+  .productosGrid {
+    margin-top: 25px;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap:
+      30px
+      9px;
+  }
+
+  .catalogoTag {
+    top: 7px;
+    left: 7px;
+
+    padding:
+      5px
+      7px;
+
+    font-size: 5px;
+  }
+
+  .catalogoFavorito {
+    width: 31px;
+    height: 31px;
+
+    top: 6px;
+    right: 6px;
+
+    font-size: 15px;
+  }
+
+  .catalogoInfo {
+    padding-top: 10px;
+  }
+
+  .catalogoCategoria {
+    font-size: 5px;
+  }
+
+  .catalogoInfo h3 {
+    min-height: 34px;
+
+    margin-bottom: 10px;
+
+    font-size: 9px;
+  }
+
+  .catalogoPrecio strong {
+    font-size: 12px;
+  }
+
+  .catalogoAgregar {
+    width: 35px;
+    height: 35px;
+
+    font-size: 18px;
+  }
+
+  /* OFFCANVAS */
+
+  .filtrosOffcanvas {
+    width: 92vw;
+  }
+
+  .carritoOffcanvas {
+    width: 94vw;
+  }
+
+  .offcanvasHeader,
+  .carritoHeader {
+    padding:
+      18px
+      17px;
+  }
+
+  .offcanvasContenido,
+  .carritoContenido {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  /* CARRITO */
+
+  .carritoProducto {
+    grid-template-columns:
+      80px
+      1fr;
+
+    gap: 12px;
+
+    padding:
+      18px
+      25px
+      18px
+      0;
+  }
+
+  .carritoProductoImagen {
+    width: 80px;
+    height: 95px;
+  }
+
+  .carritoProductoInfo h4 {
+    font-size: 9px;
+  }
+
+  .carritoProductoAbajo {
+    gap: 5px;
+  }
+
+  .carritoCantidad {
+    height: 30px;
+  }
+
+  .carritoCantidad button {
+    width: 27px;
+    height: 28px;
+  }
+
+  .carritoProductoSubtotal strong {
+    font-size: 9px;
+  }
+
+  .carritoFooter {
+    padding:
+      15px
+      17px
+      17px;
+  }
+
+  .carritoTotal > strong {
+    font-size: 22px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE MUY CHICO
+========================================= */
+
+@media (max-width: 390px) {
+
+  .selectContenedor select {
+    max-width: 112px;
+  }
+
+  .ordenContenedor select {
+    max-width: 88px;
+  }
+
+  .productosGrid {
+    gap:
+      27px
+      7px;
+  }
+
+  .catalogoInfo h3 {
+    font-size: 8px;
+  }
+
+}
+
+/* ---------------------CONOCEMAHCOMPONENT------------------------------ */
+
+/* ========================================
+   CONOCÉ MAH
+======================================== */
+
+.conoceMah {
+  width: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #111111;
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   MAH GIGANTE DE FONDO
+======================================== */
+
+.conoceMahPalabraFondo {
+  position: absolute;
+
+  top: 50%;
+  left: -25px;
+
+  transform: translateY(-53%);
+
+  color: rgba(255, 255, 255, 0.018);
+
+  font-size: clamp(250px, 38vw, 650px);
+  font-weight: 900;
+
+  line-height: 0.7;
+
+  letter-spacing: -35px;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   GLOWS
+======================================== */
+
+.conoceMahGlow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(100px);
+}
+
+.conoceMahGlowUno {
+  top: -100px;
+  right: -100px;
+
+  width: 350px;
+  height: 350px;
+
+  background:
+    rgba(233, 57, 128, 0.14);
+}
+
+.conoceMahGlowDos {
+  bottom: -170px;
+  left: 25%;
+
+  width: 300px;
+  height: 300px;
+
+  background:
+    rgba(255, 93, 157, 0.08);
+}
+
+
+/* ========================================
+   CONTENIDO
+======================================== */
+
+.conoceMahContenido {
+  width: 100%;
+  max-width: 1450px;
+
+  min-height: 620px;
+
+  position: relative;
+
+  z-index: 2;
+
+  margin: auto;
+
+  padding:
+    100px
+    6%;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 100px;
+}
+
+
+/* ========================================
+   COLUMNA IZQUIERDA
+======================================== */
+
+.conoceMahPrincipal {
+  max-width: 650px;
+}
+
+.conoceMahMini {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #ff5d9d;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+}
+
+.conoceMahPrincipal h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(50px, 5.5vw, 82px);
+  font-weight: 800;
+
+  line-height: 0.93;
+
+  letter-spacing: -4px;
+}
+
+.conoceMahPrincipal h2 span {
+  color: #ff5d9d;
+}
+
+.conoceMahDescripcion {
+  max-width: 540px;
+
+  margin:
+    32px
+    0
+    0;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+.conoceMahTexto {
+  max-width: 500px;
+
+  margin:
+    13px
+    0
+    0;
+
+  color: #858585;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   BOTONES
+======================================== */
+
+.conoceMahBotones {
+  margin-top: 35px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.conoceMahBoton {
+  height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  padding:
+    0
+    23px;
+
+  border-radius: 100px;
+
+  text-decoration: none;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border 0.2s ease;
+}
+
+.conoceMahBoton:hover {
+  transform: translateY(-2px);
+}
+
+.conoceMahBotonPrincipal {
+  border:
+    1px solid #ff5d9d;
+
+  background: #ff5d9d;
+
+  color: #ffffff;
+}
+
+.conoceMahBotonPrincipal:hover {
+  background: #e93980;
+
+  border-color: #e93980;
+}
+
+.conoceMahBotonPrincipal span {
+  font-size: 15px;
+}
+
+.conoceMahBotonSecundario {
+  border:
+    1px solid #3a3a3a;
+
+  background: transparent;
+
+  color: #ffffff;
+}
+
+.conoceMahBotonSecundario:hover {
+  border-color: #ffffff;
+}
+
+
+/* ========================================
+   LATERAL
+======================================== */
+
+.conoceMahLateral {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.8fr 1.2fr;
+
+  align-items: stretch;
+
+  border:
+    1px solid #292929;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.conoceMahLogoContenedor {
+  min-height: 360px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  border-right:
+    1px solid #292929;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+}
+
+.logoEtiqueta {
+  position: absolute;
+
+  top: 17px;
+  left: 17px;
+
+  color: #666666;
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.conoceMahLogo {
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0
+    0
+    60px
+    rgba(255, 93, 157, 0.1);
+}
+
+.conoceMahLogo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* ========================================
+   DATOS
+======================================== */
+
+.conoceMahDatos {
+  display: flex;
+  flex-direction: column;
+}
+
+.conoceMahDato {
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    35px 1fr;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    22px
+    20px;
+
+  border-bottom:
+    1px solid #292929;
+}
+
+.conoceMahDato:last-child {
+  border-bottom: none;
+}
+
+.datoNumero {
+  align-self: flex-start;
+
+  margin-top: 2px;
+
+  color: #ff5d9d;
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.conoceMahDato small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #666666;
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.conoceMahDato strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.conoceMahDato p {
+  margin:
+    4px
+    0
+    0;
+
+  color: #777777;
+
+  font-size: 8px;
+
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   CINTA INFERIOR
+======================================== */
+
+.conoceMahCinta {
+  width: 100%;
+
+  position: relative;
+
+  z-index: 3;
+
+  overflow: hidden;
+
+  border-top:
+    1px solid #292929;
+
+  background: #0b0b0b;
+}
+
+.conoceMahCintaContenido {
+  min-width: max-content;
+
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  padding:
+    0
+    25px;
+}
+
+.conoceMahCintaContenido span {
+  color: #ff5d9d;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.conoceMahCintaContenido p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.conoceMahCintaContenido small {
+  color: #e93980;
+
+  font-size: 7px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+
+  .conoceMahContenido {
+    gap: 50px;
+  }
+
+  .conoceMahLateral {
+    grid-template-columns: 1fr;
+  }
+
+  .conoceMahLogoContenedor {
+    min-height: 200px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid #292929;
+  }
+
+  .conoceMahLogo {
+    width: 120px;
+    height: 120px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 750px) {
+
+  .conoceMahContenido {
+    min-height: auto;
+
+    padding:
+      70px
+      18px
+      65px;
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  /* ======================================
+     TEXTO
+  ====================================== */
+
+  .conoceMahMini {
+    margin-bottom: 15px;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+  }
+
+  .conoceMahPrincipal h2 {
+    max-width: 450px;
+
+    font-size: 49px;
+
+    letter-spacing: -3px;
+  }
+
+  .conoceMahDescripcion {
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+  .conoceMahTexto {
+    font-size: 10px;
+  }
+
+
+  /* ======================================
+     BOTONES
+  ====================================== */
+
+  .conoceMahBotones {
+    margin-top: 28px;
+
+    gap: 7px;
+  }
+
+  .conoceMahBoton {
+    height: 44px;
+
+    padding:
+      0
+      17px;
+
+    font-size: 7px;
+  }
+
+
+  /* ======================================
+     LATERAL
+  ====================================== */
+
+  .conoceMahLateral {
+    grid-template-columns:
+      0.8fr 1.2fr;
+  }
+
+  .conoceMahLogoContenedor {
+    min-height: 300px;
+
+    padding: 20px;
+
+    border-right:
+      1px solid #292929;
+
+    border-bottom: none;
+  }
+
+  .conoceMahLogo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logoEtiqueta {
+    top: 12px;
+    left: 12px;
+
+    font-size: 5px;
+  }
+
+  .conoceMahDato {
+    grid-template-columns:
+      25px
+      1fr;
+
+    padding:
+      17px
+      12px;
+
+    gap: 5px;
+  }
+
+  .conoceMahDato strong {
+    font-size: 10px;
+  }
+
+  .conoceMahDato p {
+    font-size: 6px;
+  }
+
+  .datoNumero {
+    font-size: 6px;
+  }
+
+
+  /* ======================================
+     CINTA
+  ====================================== */
+
+  .conoceMahCinta {
+    overflow-x: hidden;
+  }
+
+  .conoceMahCintaContenido {
+    justify-content: flex-start;
+
+    min-height: 48px;
+
+    gap: 18px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .conoceMahCintaContenido::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE CHICO
+======================================== */
+
+@media (max-width: 430px) {
+
+  .conoceMahPrincipal h2 {
+    font-size: 43px;
+  }
+
+  .conoceMahBotones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .conoceMahBoton {
+    width: 100%;
+  }
+
+  .conoceMahLateral {
+    grid-template-columns: 1fr;
+  }
+
+  .conoceMahLogoContenedor {
+    min-height: 180px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid #292929;
+  }
+
+  .conoceMahLogo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .conoceMahDato {
+    min-height: 90px;
+
+    grid-template-columns:
+      30px
+      1fr;
+
+    padding:
+      16px;
+  }
+
+}
+
+/* ----------------------------FOOTERCOMPONENT-----------------------------------*/
+
+/* ========================================
+   FOOTER MAH
+======================================== */
+
+.footerMah {
+  width: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #090909;
+
+  color: #ffffff;
+
+  border-top:
+    1px solid #252525;
+}
+
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+======================================== */
+
+.footerContenido {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: auto;
+
+  padding:
+    75px
+    6%
+    65px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    0.7fr
+    0.8fr
+    1.2fr;
+
+  gap: 60px;
+}
+
+
+/* ========================================
+   MARCA
+======================================== */
+
+.footerMarca {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+}
+
+.footerLogo {
+  width: 80px;
+  height: 80px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+.footerLogo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.footerMarcaTexto {
+  padding-top: 7px;
+}
+
+.footerMarcaTexto > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #ff5d9d;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 2.5px;
+}
+
+.footerMarcaTexto p {
+  margin: 0;
+
+  color: #b0b0b0;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
+
+.footerTitulo {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #555555;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+/* ========================================
+   COLUMNAS
+======================================== */
+
+.footerColumna nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.footerColumna a {
+  position: relative;
+
+  color: #a0a0a0;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footerColumna a:hover {
+  color: #ffffff;
+
+  transform: translateX(3px);
+}
+
+
+/* ========================================
+   CONTACTO
+======================================== */
+
+.footerContacto h3 {
+  margin:
+    0
+    0
+    12px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+}
+
+.footerContacto p {
+  max-width: 250px;
+
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   REDES
+======================================== */
+
+.footerRedes {
+  margin-top: 22px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.footerRedes a {
+  min-height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding:
+    0
+    13px;
+
+  border:
+    1px solid #303030;
+
+  border-radius: 100px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  transition:
+    background 0.2s ease,
+    border 0.2s ease,
+    color 0.2s ease;
+}
+
+.footerRedes a:hover {
+  border-color: #ff5d9d;
+
+  background: #ff5d9d;
+
+  color: #ffffff;
+}
+
+.footerRedes a span {
+  font-size: 11px;
+}
+
+
+/* ========================================
+   UBICACIÓN
+======================================== */
+
+.footerInfo {
+  width: calc(100% - 12%);
+  max-width: 1276px;
+
+  min-height: 80px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border-top:
+    1px solid #252525;
+
+  border-bottom:
+    1px solid #252525;
+}
+
+.footerUbicacion {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.footerPunto {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #ff5d9d;
+
+  box-shadow:
+    0
+    0
+    15px
+    rgba(
+      255,
+      93,
+      157,
+      0.5
+    );
+}
+
+.footerUbicacion div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.footerUbicacion small {
+  color: #555555;
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.footerUbicacion strong {
+  color: #b0b0b0;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   VOLVER ARRIBA
+======================================== */
+
+.footerSubir {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #777777;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  transition:
+    color 0.2s ease;
+}
+
+.footerSubir:hover {
+  color: #ffffff;
+}
+
+.footerSubir span {
+  width: 33px;
+  height: 33px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid #303030;
+
+  border-radius: 50%;
+
+  color: #ff5d9d;
+
+  font-size: 13px;
+
+  transition:
+    border 0.2s ease,
+    background 0.2s ease;
+}
+
+.footerSubir:hover span {
+  border-color: #ff5d9d;
+
+  background:
+    rgba(
+      255,
+      93,
+      157,
+      0.08
+    );
+}
+
+
+/* ========================================
+   MAH GIGANTE
+======================================== */
+
+.footerMahGrande {
+  width: 100%;
+
+  height: clamp(
+    150px,
+    24vw,
+    340px
+  );
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding:
+    0
+    3%;
+}
+
+.footerMahGrande span {
+  position: relative;
+
+  bottom:
+    clamp(
+      -32px,
+      -3vw,
+      -15px
+    );
+
+  color: #151515;
+
+  font-size:
+    clamp(
+      180px,
+      30vw,
+      480px
+    );
+
+  font-weight: 900;
+
+  line-height: 0.72;
+
+  letter-spacing:
+    clamp(
+      -20px,
+      -2vw,
+      -8px
+    );
+
+  user-select: none;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   PIE
+======================================== */
+
+.footerPie {
+  width: calc(100% - 12%);
+  max-width: 1276px;
+
+  min-height: 60px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top:
+    1px solid #202020;
+}
+
+.footerPie p {
+  margin: 0;
+
+  color: #4e4e4e;
+
+  font-size: 6px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .footerContenido {
+    grid-template-columns:
+      1.4fr
+      0.7fr
+      0.9fr;
+
+    gap: 45px;
+  }
+
+  .footerContacto {
+    grid-column:
+      1 / -1;
+
+    padding-top: 35px;
+
+    border-top:
+      1px solid #252525;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  /* ======================================
+     CONTENIDO
+  ====================================== */
+
+  .footerContenido {
+    padding:
+      55px
+      18px
+      45px;
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap:
+      45px
+      25px;
+  }
+
+
+  /* ======================================
+     MARCA
+  ====================================== */
+
+  .footerMarca {
+    grid-column:
+      1 / -1;
+
+    align-items: center;
+  }
+
+  .footerLogo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .footerMarcaTexto > span {
+    font-size: 7px;
+  }
+
+  .footerMarcaTexto p {
+    font-size: 11px;
+  }
+
+
+  /* ======================================
+     COLUMNAS
+  ====================================== */
+
+  .footerTitulo {
+    margin-bottom: 16px;
+
+    font-size: 6px;
+  }
+
+  .footerColumna a {
+    font-size: 10px;
+  }
+
+
+  /* ======================================
+     CONTACTO
+  ====================================== */
+
+  .footerContacto {
+    grid-column:
+      1 / -1;
+
+    padding-top: 30px;
+  }
+
+  .footerContacto h3 {
+    font-size: 28px;
+  }
+
+  .footerContacto p {
+    font-size: 9px;
+  }
+
+  .footerRedes a {
+    min-height: 38px;
+
+    padding:
+      0
+      15px;
+  }
+
+
+  /* ======================================
+     UBICACIÓN
+  ====================================== */
+
+  .footerInfo {
+    width:
+      calc(
+        100% - 36px
+      );
+
+    min-height: 75px;
+  }
+
+  .footerUbicacion strong {
+    font-size: 8px;
+  }
+
+  .footerSubir {
+    font-size: 0;
+  }
+
+  .footerSubir span {
+    width: 36px;
+    height: 36px;
+
+    font-size: 14px;
+  }
+
+
+  /* ======================================
+     MAH
+  ====================================== */
+
+  .footerMahGrande {
+    height: 180px;
+
+    padding: 0;
+  }
+
+  .footerMahGrande span {
+    bottom: -12px;
+
+    font-size: 220px;
+
+    letter-spacing: -15px;
+  }
+
+
+  /* ======================================
+     PIE
+  ====================================== */
+
+  .footerPie {
+    width:
+      calc(
+        100% - 36px
+      );
+
+    min-height: 65px;
+
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .footerPie p {
+    font-size: 5px;
+  }
+
+  .footerPie p:nth-child(2),
+  .footerPie p:nth-child(3) {
+    display: none;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE CHICO
+======================================== */
+
+@media (max-width: 390px) {
+
+  .footerContenido {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    gap:
+      40px
+      15px;
+  }
+
+  .footerMahGrande {
+    height: 150px;
+  }
+
+  .footerMahGrande span {
+    font-size: 185px;
+  }
+
+}
+
+/*-------------------------------CHECKOUTCOMPONENT-----------------------------------*/
+
+/* =========================================
+   CHECKOUT
+========================================= */
+
+.checkout {
+  min-height: 100vh;
+  background: #f6f6f6;
+  color: #111;
+  padding: 0 24px 80px;
+}
+
+.checkout * {
+  box-sizing: border-box;
+}
+
+.checkout button,
+.checkout input,
+.checkout textarea {
+  font-family: inherit;
+}
+
+.checkoutContenedor {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.checkoutHeader {
+  height: 90px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  border-bottom: 1px solid #dedede;
+
+  margin-bottom: 42px;
+}
+
+.checkoutVolver {
+  justify-self: start;
+
+  border: 0;
+  background: transparent;
+
+  padding: 10px 0;
+
+  color: #111;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 0.09em;
+
+  cursor: pointer;
+}
+
+.checkoutLogo {
+  font-size: 32px;
+  font-weight: 950;
+
+  letter-spacing: -0.08em;
+}
+
+.checkoutHeaderSeguro {
+  justify-self: end;
+
+  color: #888;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================
+   PROGRESO
+========================================= */
+
+.checkoutProgreso {
+  width: min(660px, 100%);
+
+  margin: 0 auto 60px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr
+    auto
+    1fr
+    auto;
+
+  align-items: center;
+}
+
+.checkoutPaso {
+  border: 0;
+  background: transparent;
+
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #aaa;
+}
+
+.checkoutPasoCirculo {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #d4d4d4;
+  border-radius: 50%;
+
+  background: #f6f6f6;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  transition: 0.25s ease;
+}
+
+.checkoutPasoTexto {
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.checkoutPaso.activo {
+  color: #111;
+}
+
+.checkoutPaso.activo .checkoutPasoCirculo {
+  border-color: #ff3f8e;
+  background: #ff3f8e;
+  color: #fff;
+
+  box-shadow:
+    0 5px 18px rgba(255, 63, 142, 0.22);
+}
+
+.checkoutPaso.completado {
+  color: #111;
+  cursor: pointer;
+}
+
+.checkoutPaso.completado .checkoutPasoCirculo {
+  background: #111;
+  border-color: #111;
+  color: white;
+}
+
+.checkoutLinea {
+  height: 2px;
+
+  background: #ddd;
+
+  margin:
+    0
+    15px
+    27px;
+
+  transition: background 0.3s ease;
+}
+
+.checkoutLinea.completada {
+  background: #111;
+}
+
+
+/* =========================================
+   ETAPA
+========================================= */
+
+.checkoutEtapa {
+  animation: checkoutEntrada 0.35s ease;
+}
+
+@keyframes checkoutEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.checkoutTitulo {
+  margin-bottom: 32px;
+}
+
+.checkoutTitulo > span {
+  display: block;
+
+  color: #ff3f8e;
+
+  font-size: 10px;
+  font-weight: 950;
+
+  letter-spacing: 0.17em;
+
+  margin-bottom: 10px;
+}
+
+.checkoutTitulo h1 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 0.95;
+
+  font-weight: 950;
+
+  letter-spacing: -0.06em;
+}
+
+.checkoutTitulo p {
+  max-width: 520px;
+
+  margin: 14px 0 0;
+
+  color: #777;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   LAYOUT
+========================================= */
+
+.checkoutLayout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    350px;
+
+  gap: 28px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   PRODUCTOS
+========================================= */
+
+.checkoutProductos {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.checkoutProducto {
+  position: relative;
+
+  min-width: 0;
+
+  background: #fff;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+
+  padding: 16px;
+
+  display: grid;
+
+  grid-template-columns:
+    105px
+    minmax(0, 1fr)
+    auto;
+
+  gap: 18px;
+
+  align-items: center;
+}
+
+.checkoutProductoImagen {
+  width: 105px;
+  height: 105px;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: #f4f4f4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkoutProductoImagen img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.checkoutSinImagen {
+  font-size: 19px;
+  font-weight: 950;
+
+  letter-spacing: -0.07em;
+}
+
+.checkoutProductoInfo {
+  min-width: 0;
+}
+
+.checkoutProductoCategoria {
+  display: block;
+
+  color: #ff3f8e;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  margin-bottom: 5px;
+}
+
+.checkoutProductoInfo h3 {
+  margin: 0 0 7px;
+
+  font-size: 16px;
+  line-height: 1.3;
+
+  font-weight: 850;
+}
+
+.checkoutProductoPrecioUnitario {
+  display: block;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  margin-bottom: 14px;
+}
+
+.checkoutProductoAcciones {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   CANTIDAD
+========================================= */
+
+.checkoutCantidad {
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #ddd;
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.checkoutCantidad button {
+  width: 34px;
+  height: 100%;
+
+  border: 0;
+  background: transparent;
+
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+.checkoutCantidad button:hover {
+  background: #f4f4f4;
+}
+
+.checkoutCantidad span {
+  min-width: 28px;
+
+  text-align: center;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.checkoutEliminar {
+  border: 0;
+  background: transparent;
+
+  color: #999;
+
+  padding: 5px;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+}
+
+.checkoutEliminar:hover {
+  color: #ff3f8e;
+}
+
+
+/* =========================================
+   SUBTOTAL PRODUCTO
+========================================= */
+
+.checkoutProductoSubtotal {
+  min-width: 110px;
+
+  text-align: right;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.checkoutProductoSubtotal span {
+  color: #999;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+}
+
+.checkoutProductoSubtotal strong {
+  font-size: 19px;
+  font-weight: 950;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================
+   RESUMEN
+========================================= */
+
+.checkoutResumen {
+  position: sticky;
+  top: 24px;
+
+  background: #fff;
+
+  border: 1px solid #e4e4e4;
+  border-radius: 20px;
+
+  padding: 26px;
+}
+
+.checkoutResumenMini {
+  display: block;
+
+  color: #ff3f8e;
+
+  font-size: 9px;
+  font-weight: 950;
+
+  letter-spacing: 0.16em;
+
+  margin-bottom: 7px;
+}
+
+.checkoutResumen h2 {
+  margin: 0 0 24px;
+
+  font-size: 24px;
+  line-height: 1;
+
+  font-weight: 950;
+
+  letter-spacing: -0.04em;
+}
+
+.checkoutResumenLinea {
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  border-bottom: 1px solid #eee;
+
+  font-size: 12px;
+}
+
+.checkoutResumenLinea span {
+  color: #777;
+}
+
+.checkoutResumenLinea strong {
+  font-size: 12px;
+  font-weight: 850;
+
+  text-align: right;
+}
+
+
+/* =========================================
+   TOTAL
+========================================= */
+
+.checkoutTotal {
+  padding: 25px 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.checkoutTotal > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.checkoutTotal span {
+  font-size: 10px;
+  font-weight: 950;
+
+  letter-spacing: 0.13em;
+}
+
+.checkoutTotal small {
+  color: #999;
+
+  font-size: 9px;
+}
+
+.checkoutTotal > strong {
+  font-size: 28px;
+  line-height: 1;
+
+  font-weight: 950;
+
+  letter-spacing: -0.06em;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.checkoutBotonPrincipal {
+  width: 100%;
+  min-height: 56px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: #111;
+  color: #fff;
+
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 11px;
+  font-weight: 950;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.checkoutBotonPrincipal:hover {
+  background: #ff3f8e;
+
+  transform: translateY(-2px);
+}
+
+.checkoutBotonPrincipal span:last-child {
+  font-size: 20px;
+}
+
+.checkoutBotonSecundario {
+  width: 100%;
+
+  border: 0;
+  background: transparent;
+
+  color: #777;
+
+  padding: 17px 10px 3px;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 0.07em;
+
+  cursor: pointer;
+}
+
+.checkoutBotonSecundario:hover {
+  color: #111;
+}
+
+.checkoutConfirmar {
+  background: #ff3f8e;
+}
+
+.checkoutConfirmar:hover {
+  background: #111;
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.checkoutFormulario,
+.checkoutPago {
+  background: #fff;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+
+  padding: 30px;
+}
+
+.checkoutFormularioTitulo {
+  padding-bottom: 23px;
+
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.checkoutFormularioTitulo span {
+  display: block;
+
+  color: #ff3f8e;
+
+  font-size: 9px;
+  font-weight: 950;
+
+  letter-spacing: 0.15em;
+
+  margin-bottom: 7px;
+}
+
+.checkoutFormularioTitulo h2 {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 950;
+
+  letter-spacing: -0.04em;
+}
+
+.checkoutCampos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px 15px;
+}
+
+.checkoutCampo {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.checkoutCampoCompleto {
+  grid-column: 1 / -1;
+}
+
+.checkoutCampoDireccion {
+  grid-column: span 1;
+}
+
+.checkoutCampoAltura {
+  grid-column: span 1;
+}
+
+.checkoutCampo > span {
+  color: #555;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 0.09em;
+}
+
+.checkoutCampo input,
+.checkoutCampo textarea {
+  width: 100%;
+
+  border: 1px solid #ddd;
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #fafafa;
+
+  color: #111;
+
+  padding: 0 14px;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.checkoutCampo input {
+  height: 49px;
+}
+
+.checkoutCampo textarea {
+  min-height: 105px;
+
+  padding-top: 14px;
+
+  resize: vertical;
+}
+
+.checkoutCampo input:focus,
+.checkoutCampo textarea:focus {
+  border-color: #ff3f8e;
+
+  background: #fff;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 63, 142, 0.08);
+}
+
+.checkoutCampo input.campoError,
+.checkoutCampo textarea.campoError {
+  border-color: #e03131;
+}
+
+.checkoutCampo > small {
+  color: #e03131;
+
+  font-size: 9px;
+  font-weight: 750;
+}
+
+
+/* =========================================
+   PAGO
+========================================= */
+
+.checkoutPagoOpcion {
+  min-height: 95px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  border: 2px solid #ff3f8e;
+  border-radius: 15px;
+
+  background: rgba(255, 63, 142, 0.035);
+}
+
+.checkoutPagoRadio {
+  width: 20px;
+  height: 20px;
+
+  flex: 0 0 20px;
+
+  border: 2px solid #ff3f8e;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 1px;
+}
+
+.checkoutPagoRadio span {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #ff3f8e;
+}
+
+.checkoutPagoOpcion strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 14px;
+}
+
+.checkoutPagoOpcion p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #777;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   CONFIRMACIÓN DATOS
+========================================= */
+
+.checkoutDatosConfirmacion {
+  margin-top: 30px;
+
+  border-top: 1px solid #eee;
+
+  padding-top: 25px;
+}
+
+.checkoutDatosTitulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 13px;
+}
+
+.checkoutDatosTitulo > span {
+  font-size: 9px;
+  font-weight: 950;
+
+  letter-spacing: 0.12em;
+}
+
+.checkoutDatosTitulo button {
+  border: 0;
+  background: transparent;
+
+  color: #ff3f8e;
+
+  padding: 4px;
+
+  font-size: 9px;
+  font-weight: 950;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+}
+
+.checkoutDato {
+  min-height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  border-bottom: 1px solid #eee;
+
+  font-size: 12px;
+}
+
+.checkoutDato span {
+  color: #888;
+}
+
+.checkoutDato strong {
+  max-width: 65%;
+
+  text-align: right;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   CARRITO VACÍO
+========================================= */
+
+.checkoutVacio {
+  width: min(550px, calc(100% - 30px));
+
+  min-height: 100vh;
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.checkoutVacioMarca {
+  color: #ff3f8e;
+
+  font-size: 55px;
+  font-weight: 950;
+
+  letter-spacing: -0.09em;
+
+  margin-bottom: 25px;
+}
+
+.checkoutVacio > span {
+  color: #ff3f8e;
+
+  font-size: 9px;
+  font-weight: 950;
+
+  letter-spacing: 0.15em;
+}
+
+.checkoutVacio h1 {
+  margin: 10px 0;
+
+  font-size: clamp(35px, 6vw, 55px);
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+}
+
+.checkoutVacio p {
+  margin: 5px 0 25px;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+.checkoutVacio button {
+  min-width: 220px;
+  min-height: 52px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: #111;
+  color: white;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 0.07em;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .checkoutLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .checkoutResumen {
+    position: static;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .checkout {
+    padding: 0 13px 50px;
+  }
+
+
+  /* HEADER */
+
+  .checkoutHeader {
+    height: 70px;
+
+    margin-bottom: 30px;
+  }
+
+  .checkoutLogo {
+    font-size: 25px;
+  }
+
+  .checkoutHeaderSeguro {
+    display: none;
+  }
+
+
+  /* PROGRESO */
+
+  .checkoutProgreso {
+    margin-bottom: 38px;
+  }
+
+  .checkoutPasoCirculo {
+    width: 31px;
+    height: 31px;
+
+    font-size: 10px;
+  }
+
+  .checkoutPasoTexto {
+    font-size: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  .checkoutLinea {
+    margin:
+      0
+      5px
+      23px;
+  }
+
+
+  /* TÍTULO */
+
+  .checkoutTitulo {
+    margin-bottom: 23px;
+  }
+
+  .checkoutTitulo h1 {
+    font-size: 38px;
+  }
+
+  .checkoutTitulo p {
+    font-size: 12px;
+  }
+
+
+  /* PRODUCTO */
+
+  .checkoutProducto {
+    grid-template-columns:
+      82px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 12px;
+
+    border-radius: 14px;
+  }
+
+  .checkoutProductoImagen {
+    width: 82px;
+    height: 82px;
+
+    align-self: start;
+
+    border-radius: 10px;
+  }
+
+  .checkoutProductoInfo h3 {
+    font-size: 13px;
+  }
+
+  .checkoutProductoPrecioUnitario {
+    font-size: 12px;
+
+    margin-bottom: 10px;
+  }
+
+  .checkoutProductoAcciones {
+    gap: 7px;
+  }
+
+  .checkoutProductoSubtotal {
+    grid-column: 2;
+
+    min-width: 0;
+
+    text-align: left;
+
+    flex-direction: row;
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  .checkoutProductoSubtotal strong {
+    font-size: 16px;
+  }
+
+
+  /* RESUMEN */
+
+  .checkoutResumen {
+    padding: 21px;
+
+    border-radius: 16px;
+  }
+
+  .checkoutResumen h2 {
+    font-size: 21px;
+  }
+
+  .checkoutTotal > strong {
+    font-size: 24px;
+  }
+
+
+  /* FORM */
+
+  .checkoutFormulario,
+  .checkoutPago {
+    padding: 20px 15px;
+
+    border-radius: 16px;
+  }
+
+  .checkoutFormularioTitulo h2 {
+    font-size: 21px;
+  }
+
+  .checkoutCampos {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .checkoutCampo,
+  .checkoutCampoCompleto,
+  .checkoutCampoDireccion,
+  .checkoutCampoAltura {
+    grid-column: 1;
+  }
+
+  .checkoutCampo input {
+    height: 48px;
+  }
+
+
+  /* DATOS */
+
+  .checkoutDato {
+    align-items: flex-start;
+
+    padding: 12px 0;
+  }
+
+  .checkoutDato strong {
+    max-width: 62%;
+  }
+
+}
